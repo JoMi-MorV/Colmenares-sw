@@ -1,0 +1,860 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap'); */
+
+/*Paleta de colores*/
+.shadow-lg {
+    box-shadow: 0 1rem 3rem rgba(0,0,0,.175) !important;
+}
+
+/* Añade esto: */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Variables globales */
+:root {
+    --primary-color: #3C3833;
+    --secondary-color: #6c757d;
+    --accent-color: #ffc107;
+    --text-color: #212529;
+    --white: #ffffff;
+    --bs-primary: #FFD72D;          /* Dorado */
+    --bs-secondary: #3C3833;        /* Gris oscuro para el texto principal */
+    --bs-accent: #034B3E;           /* Verde oscuro */
+    --bs-light: #FFFEFC;            /* Blanco crema */
+    --bs-info: #83572F;             /* Usado para texto secundario específico */
+}
+
+.bg-primary { background-color: var(--bs-primary) !important; }
+.bg-secondary { background-color: var(--bs-secondary) !important; }
+.text-primary { color: var(--bs-primary) !important; }
+.text-secondary { color: var(--bs-secondary) !important; }
+.text-accent { color: var(--bs-secondary) !important; }
+.bg-ligth { background-color: var(--bs-light) !important; }
+
+/*Estilos Body */
+@font-face {
+    font-family: 'MADE TOMMY';
+    src: url('fonts/tommy/MADE\ TOMMY\ Black_PERSONAL\ USE.otf') format('opentype');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'MADE TOMMY';
+    src: url('fonts/tommy/MADE\ TOMMY\ Bold_PERSONAL\ USE.otf') format('opentype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'MADE TOMMY';
+    src: url('fonts/tommy/MADE\ TOMMY\ ExtraBold_PERSONAL\ USE.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'MADE TOMMY';
+    src: url('fonts/tommy/MADE\ TOMMY\ Light_PERSONAL\ USE.otf') format('opentype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'MADE TOMMY';
+    src: url('fonts/tommy/MADE\ TOMMY\ Medium_PERSONAL\ USE.otf') format('opentype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'MADE TOMMY';
+    src: url('fonts/tommy/MADE\ TOMMY\ Regular_PERSONAL\ USE.otf') format('opentype');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'MADE TOMMY';
+    src: url('fonts/tommy/MADE\ TOMMY\ Thin_PERSONAL\ USE.otf') format('opentype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+  font-family: 'Caviar Dreams';
+  src: url('fonts/Caviar/CaviarDreams.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Caviar Dreams';
+  src: url('fonts/Caviar/CaviarDreams_Bold.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Caviar Dreams';
+  src: url('fonts/Caviar/CaviarDreams_BoldItalic.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Caviar Dreams';
+  src: url('fonts/Caviar/CaviarDreams_Italic.ttf') format('truetype');
+  font-weight: 700;
+  font-style: italic;
+}
+body {
+    font-family: 'Caviar Dreams', sans-serif;
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* Estilos para títulos y subtítulos */
+h1, h2, h3, h4, h5, h6,
+.card-title,
+.display-4,
+.fw-bold,
+.lead,
+.nav-link,
+.btn {
+    font-family: 'MADE TOMMY', sans-serif;
+}
+
+/* Estilos específicos para diferentes pesos de MADE TOMMY */
+h1, .display-4 {
+    font-weight: 800; /* ExtraBold */
+}
+
+h2, h3, .card-title {
+    font-weight: 700; /* Bold */
+}
+
+h4, h5, .lead {
+    font-weight: 500; /* Medium */
+}
+
+h6, .nav-link, .btn {
+    font-weight: 400; /* Regular */
+}
+
+/* Estilos para textos normales */
+p, 
+.text-secondary,
+.form-label,
+.card-text,
+.footer p {
+    font-family: 'Caviar Dreams', sans-serif;
+    font-weight: 400; /* Regular */
+}
+
+/* Estilos para textos en negrita */
+strong, 
+b,
+.fw-bold {
+    font-family: 'Caviar Dreams', sans-serif;
+    font-weight: 700; /* Bold */
+}
+
+nav, footer {
+    font-family: 'MADE TOMMY', sans-serif;
+    font-weight: 400;
+}
+/* Sección Hero */
+.hero-section {
+    position: relative;
+    min-height: 60vh;
+    background-image: url('imagenes/colema.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* Responsive para hero en móviles */
+@media (max-width: 768px) {
+    .hero-section {
+        min-height: 50vh;
+        background-attachment: scroll;
+    }
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+/* Custom button */
+.custom-btn-primary {
+    background-color: var(--bs-primary);
+    color: var(--bs-secondary); /* color de texto para el botón */
+    border-color: var(--bs-primary);
+    font-weight: 600;
+}
+
+.custom-btn-primary:hover {
+    background-color: var(--bs-secondary); /* color de hover para el botón */
+    color: var(--bs-light) !important;
+    border-color: var(--bs-accent);
+}
+
+/* colores personalizados para bordes de tarjetas */
+.card.border-top-primary {
+    border-top: 4px solid var(--bs-primary) !important;
+}
+
+/* efectos hover para enlaces de navegación y blog */
+.hover-accent:hover {
+    color: var(--bs-secondary) !important; /* cambia el color al hacer hover */
+}
+
+.hover-primary:hover {
+    color: var(--bs-secondary) !important; /* cambia el color al hacer hover */
+}
+
+/* asegurar que las imágenes de logo en el header y footer tengan altura fija */
+.h-16 {
+    height: 4rem; /* 64px */
+}
+
+/* altura de las tarjetas del blog */
+.card-img-top {
+    height: 224px; /* 56 * 4px, o 14rem */
+    object-fit: cover;
+}
+
+#hero {
+    /* 1. La imagen de fondo: */
+    background-image: url('imagenes/imagen colmenares.png'); /* ¡Esta es tu imagen local! */
+    
+    /* 2. Propiedades de la imagen de fondo: */
+    background-size: cover;       /* Hace que la imagen cubra TODO el espacio de la sección. Si la imagen es más grande o pequeña, se escalará y se recortará si es necesario. */
+    background-position: center;  /* Centra la imagen en el medio de la sección. */
+    background-repeat: no-repeat; /* Evita que la imagen se repita si el espacio es grande. */
+    
+    /* 3. Definir la altura de la sección: */
+    /* Es VITAL que tu sección tenga una altura definida para que la imagen de fondo se vea. */
+    min-height: 600px; /* Ejemplo: Dale una altura mínima. Puedes ajustarla a tu gusto (e.g., 100vh para ocupar toda la altura de la ventana). */
+
+    /* 4. Posicionamiento para los elementos internos (overlay y texto): */
+    position: relative; /* ¡MUY IMPORTANTE! Permite que los elementos hijos con 'position: absolute' (como el overlay) se posicionen con respecto a esta sección. */
+    
+    /* Otros estilos que ya tenías (o puedes ajustar): */
+    color: white; /* Color del texto dentro de la sección */
+    display: flex; /* Para centrar el contenido (flexbox) */
+    align-items: center; /* Centra verticalmente el contenido */
+    justify-content: center; /* Centra horizontalmente el contenido */
+    text-align: center; /* Alinea el texto */
+    padding: 80px 0; /* Espacio interno, ajusta si es necesario */
+    overflow: hidden; /* Esto ayuda a que el fondo no se desborde si hay algún recorte */
+}
+
+/* #empresaCarousel { /* imagen modulo descripcion empresa */
+    /* Aquí van los estilos de la sección si no es para un fondo de imagen */
+    /*padding-top: 5rem;  Ajusta py-5 de Bootstrap */
+    /*padding-bottom: 5rem;  Ajusta py-5 de Bootstrap */
+    /* min-height ya no es tan crítico si el contenido la empuja */
+/*} 
+*/
+
+#empresaCarousel {
+    padding-top: 0;
+    padding-bottom: 0;
+    overflow: hidden;
+    border-radius: 0.5rem;
+}
+
+#empresaCarousel .carousel-inner {
+    max-height: 350px;
+    overflow: hidden;
+    border-radius: 0.5rem;
+}
+
+
+#empresaCarousel .carousel-item img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 0.5rem;
+}
+
+/* Estilos adicionales para la imagen si los necesitas */
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+.rounded {
+    border-radius: 0.5rem !important; /* Bootstrap utility */
+}
+.shadow-lg {
+    box-shadow: 0 1rem 3rem rgba(0,0,0,.175) !important; /* Bootstrap utility */
+}
+
+/* Fondo de los botones del menu */
+.nav-link.hover-accent:hover {
+    background-color:var(--bs-light);
+    color: var(--bs-secondary) !important;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border-radius: 0.25rem; /* opcional, para que el fondo se vea con bordes redondeados */
+}
+
+/* Deslizmiento de las imagenes del carrusel*/
+#empresaCarousel .carousel-item {
+  transition: transform 1s ease-in-out, opacity 1s ease-in-out !important;
+}
+
+
+/* Boton del idioma */
+#btn-cambiar-idioma {
+    color: #3C3833;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 8px 15px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+#btn-cambiar-idioma:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: scale(1.05);
+}
+
+#btn-cambiar-idioma img {
+    width: 24px;
+    height: 18px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Fondo de los botones del menu */
+.nav-traduccion.hover-accent:hover {
+    background-color:var(--bs-secondary);
+    color: var(--bs-light) !important;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border-radius: 0.25rem; /* opcional, para que el fondo se vea con bordes redondeados */
+}
+
+/* Estilos para las tarjetas del blog y últimas publicaciones */
+section#blog .card,
+section#blog .blog-card,
+.card.blog-card {
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+                box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    will-change: transform, box-shadow;
+    transform: translateY(0);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+section#blog .card .card-body,
+section#blog .blog-card .card-body,
+.card.blog-card .card-body {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+section#blog .card .card-text,
+section#blog .blog-card .card-text,
+.card.blog-card .card-text {
+    flex-grow: 1;
+    margin-bottom: 1rem;
+}
+
+section#blog .card:hover,
+section#blog .blog-card:hover,
+.card.blog-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.2), 0 10px 10px -5px rgba(0, 0, 0, 0.1);
+    z-index: 2;
+}
+
+/* Estilos para el enlace Leer más */
+section#blog .card .read-more,
+section#blog .blog-card .read-more,
+.card.blog-card .read-more {
+    color: var(--bs-primary) !important;
+    text-decoration: none;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: gap 0.3s ease;
+    margin-top: auto;
+    align-self: flex-start;
+}
+
+section#blog .card .read-more:hover,
+section#blog .blog-card .read-more:hover,
+.card.blog-card .read-more:hover {
+    gap: 0.75rem;
+    color: var(--bs-secondary) !important;
+}
+
+/* Eliminar los estilos anteriores de las tarjetas generales */
+.card.border-top-primary,
+.card.border {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+/* Optimización de imágenes */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Estilos del header */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Estilos de navegación */
+.nav-link {
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: var(--accent-color) !important;
+}
+
+/* Botones */
+.btn {
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+/* Formulario */
+.form-control:focus {
+    border-color: var(--accent-color);
+    box-shadow: 0 0 0 0.2rem rgba(255, 193, 7, 0.25);
+}
+
+/* Footer */
+footer {
+    background-color: var(--bs-secondary) !important;
+    color: var(--bs-white) !important;
+}
+
+footer a {
+    color: var(--bs-white) !important;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: var(--bs-primary) !important;
+}
+
+footer img {
+    height: 3.5rem;
+}
+
+/* Botón volver arriba */
+#btn-volver-arriba {
+    width: 45px;
+    height: 45px;
+    background-color: var(--bs-secondary);
+    border: 3px solid var(--bs-primary);
+    transition: all 0.3s ease;
+}
+
+#btn-volver-arriba:hover {
+    background-color: var(--bs-primary);
+    border-color: var(--bs-secondary);
+    transform: translateY(-3px);
+}
+
+#btn-volver-arriba .material-icons {
+    font-size: 24px;
+    color: var(--bs-light);
+}
+
+#btn-volver-arriba:hover .material-icons {
+    color: var(--bs-secondary);
+}
+
+/* Estilos para el hero section */
+.hero-section .lead {
+    max-width: 700px;
+}
+
+/* Estilos para el carrusel */
+#empresaCarousel .carousel-item img {
+    aspect-ratio: 16/9;
+    object-fit: cover;
+}
+
+/* Estilos para el blog */
+.blog-card .card-img-top {
+    height: 224px;
+    object-fit: cover;
+}
+
+/* Estilos para el footer */
+footer .social-links a {
+    margin-right: 1rem;
+}
+
+/* Optimizaciones de rendimiento */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        scroll-behavior: auto !important;
+    }
+}
+
+/* Optimizaciones para dispositivos móviles */
+@media (max-width: 768px) {
+    .hero-section {
+        min-height: 40vh;
+    }
+    
+    .display-4 {
+        font-size: 2rem;
+    }
+    
+    .lead {
+        font-size: 1rem;
+    }
+    
+    /* Navegación móvil */
+    .navbar-toggler {
+        border: none;
+        padding: 0.25rem 0.5rem;
+    }
+    
+    .navbar-toggler:focus {
+        box-shadow: none;
+    }
+    
+    .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.75%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='m4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    }
+    
+    /* Cards responsivas */
+    .card {
+        margin-bottom: 1rem;
+    }
+    
+    /* Espaciado responsivo */
+    .py-5 {
+        padding-top: 2rem !important;
+        padding-bottom: 2rem !important;
+    }
+    
+    /* Tamaños de fuente responsivos */
+    .fs-2 {
+        font-size: 1.5rem !important;
+    }
+    
+    .fs-4 {
+        font-size: 1.25rem !important;
+    }
+    
+    .fs-5 {
+        font-size: 1.1rem !important;
+    }
+    
+    .fs-6 {
+        font-size: 1rem !important;
+    }
+    
+    /* Carousel responsivo */
+    #empresaCarousel .carousel-inner {
+        max-height: 250px;
+    }
+    
+    /* Botón volver arriba responsivo */
+    #btn-volver-arriba {
+        width: 3rem !important;
+        height: 3rem !important;
+    }
+    
+    #btn-volver-arriba .material-icons {
+        font-size: 1.25rem !important;
+    }
+    
+    /* Material icons responsivos */
+    .material-icons {
+        font-size: clamp(1.25rem, 4vw, 1.5rem) !important;
+    }
+    
+    /* Footer responsivo */
+    footer .fs-4 {
+        font-size: 1.25rem !important;
+    }
+    
+    footer .fs-5 {
+        font-size: 1.1rem !important;
+    }
+}
+
+/* Optimizaciones para tablets */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .hero-section {
+        min-height: 50vh;
+    }
+    
+    /* Tamaños de fuente para tablets */
+    .display-4 {
+        font-size: 2.5rem;
+    }
+    
+    .fs-2 {
+        font-size: 1.75rem !important;
+    }
+    
+    .fs-4 {
+        font-size: 1.5rem !important;
+    }
+    
+    /* Carousel para tablets */
+    #empresaCarousel .carousel-inner {
+        max-height: 300px;
+    }
+    
+    /* Espaciado para tablets */
+    .py-5 {
+        padding-top: 3rem !important;
+        padding-bottom: 3rem !important;
+    }
+}
+
+/* Optimizaciones de impresión */
+@media print {
+    .hero-section,
+    .btn-volver-arriba,
+    .nav-traduccion {
+        display: none !important;
+    }
+}
+
+/* Estilos para las tarjetas del index1 */
+.card.border-top-primary,
+.card.border {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+/* Estilos para el nombre de la compañía */
+header h1,
+footer .fs-4.fw-semibold {
+    font-family: 'MADE TOMMY', sans-serif !important;
+    font-weight: 700; /* Bold */
+}
+
+/* Estilos para subtítulos de sección */
+#empresa h2,
+#mision-vision h2,
+#valores h2,
+#productos-servicios h2,
+#blog h2,
+#contacto h2 {
+    font-family: 'MADE TOMMY', sans-serif !important;
+    font-weight: 700; /* Bold */
+}
+
+/* Estilos para los modales */
+.modal-content {
+    border: none;
+    border-radius: 1rem;
+    box-shadow: 0 0.5rem 1rem rgba(60,56,51,0.15);
+}
+
+.modal-header {
+    border-bottom: 2px solid var(--bs-primary);
+    background-color: var(--bs-accent);
+    color: var(--bs-light);
+    border-radius: 1rem 1rem 0 0;
+}
+
+.modal-header .btn-close {
+    filter: brightness(0) invert(1);
+}
+
+.modal-title {
+    font-family: 'MADE TOMMY', sans-serif;
+    font-weight: 700;
+}
+
+.modal-body {
+    padding: 2rem;
+}
+
+.modal-footer {
+    border-top: 2px solid var(--bs-primary);
+    padding: 1rem 2rem;
+}
+
+.modal-footer .btn-secondary {
+    background-color: var(--bs-secondary);
+    border: none;
+    padding: 0.5rem 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.modal-footer .btn-secondary:hover {
+    background-color: var(--bs-accent);
+    transform: translateY(-2px);
+}
+
+/* Animación para los modales */
+.modal.fade .modal-dialog {
+    transform: scale(0.8);
+    transition: transform 0.3s ease-out;
+}
+
+.modal.show .modal-dialog {
+    transform: scale(1);
+}
+
+/* === STYLES NECESARIOS SOLO PARA index1.html === */
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Sección Hero exclusiva de la home */
+.hero-section {
+    position: relative;
+    min-height: 60vh;
+    background-image: url('imagenes/colema.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+@media (max-width: 768px) {
+    .hero-section {
+        min-height: 50vh;
+        background-attachment: scroll;
+    }
+}
+.hero-overlay {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+/* Carousel de empresa */
+#empresaCarousel {
+    border-radius: 1rem;
+    overflow: hidden;
+}
+#empresaCarousel .carousel-inner {
+    border-radius: 1rem;
+}
+#empresaCarousel .carousel-item img {
+    border-radius: 1rem;
+    object-fit: cover;
+}
+
+/* Cards de valores */
+.card.border-top-primary {
+    border-top: 4px solid #FFD72D !important;
+}
+
+/* Botón volver arriba */
+#btn-volver-arriba {
+    background: #3C3833;
+    color: #fff;
+    border: 3px solid var(--bs-primary);
+    box-shadow: 0 1rem 3rem rgba(0,0,0,.175);
+}
+#btn-volver-arriba:hover {
+    background: var(--bs-primary);
+    color: var(--bs-secondary);
+    border-color: var(--bs-secondary);
+}
+
+/* Ajustes de imágenes y logos */
+.h-16 {
+    height: 4rem;
+}
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Ajustes de títulos y textos (si no están en blog-styles.css) */
+.text-accent {
+    color: #3C3833 !important;
+}
+.bg-primary {
+    background-color: #FFD72D !important;
+}
+.bg-secondary {
+    background-color: #3C3833 !important;
+}
+.text-primary {
+    color: #FFD72D !important;
+}
+.text-secondary {
+    color: #3C3833 !important;
+}
+
+/* Elimina fuentes y variables duplicadas, y todo lo que ya está en blog-styles.css */
+/* Si notas que falta algún estilo, puedes restaurarlo desde el backup anterior. */
+
+/* Estilos para los iconos de redes sociales */
+.social-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 3rem;
+    height: 3rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    color: var(--bs-light) !important;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-size: 1.5rem;
+}
+
+.social-link:hover {
+    background-color: var(--bs-primary);
+    color: var(--bs-secondary) !important;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(255, 215, 45, 0.3);
+}
+
+.social-link i {
+    transition: all 0.3s ease;
+}
+
+.social-link:hover i {
+    transform: scale(1.1);
+}
+
+/* Responsive para redes sociales */
+@media (max-width: 768px) {
+    .social-links {
+        gap: 1rem;
+    }
+    
+    .social-link {
+        width: 2.5rem;
+        height: 2.5rem;
+        font-size: 1.25rem;
+    }
+}
+

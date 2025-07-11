@@ -1,0 +1,618 @@
+@font-face {
+    font-family: 'MADE TOMMY';
+    src: url('fonts/tommy/MADE\ TOMMY\ Black_PERSONAL\ USE.otf') format('opentype');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'MADE TOMMY';
+    src: url('fonts/tommy/MADE\ TOMMY\ Bold_PERSONAL\ USE.otf') format('opentype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'MADE TOMMY';
+    src: url('fonts/tommy/MADE\ TOMMY\ ExtraBold_PERSONAL\ USE.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'MADE TOMMY';
+    src: url('fonts/tommy/MADE\ TOMMY\ Light_PERSONAL\ USE.otf') format('opentype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'MADE TOMMY';
+    src: url('fonts/tommy/MADE\ TOMMY\ Medium_PERSONAL\ USE.otf') format('opentype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'MADE TOMMY';
+    src: url('fonts/tommy/MADE\ TOMMY\ Regular_PERSONAL\ USE.otf') format('opentype');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'MADE TOMMY';
+    src: url('fonts/tommy/MADE\ TOMMY\ Thin_PERSONAL\ USE.otf') format('opentype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Caviar Dreams';
+    src: url('fonts/Caviar/CaviarDreams.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* Paleta de colores de marca */
+:root {
+    --color-verde: #034B3E;
+    --color-cafe: #83572F;
+    --color-blanco: #FFFEFC;
+    --color-amarillo: #FFD72D;
+    --color-gris: #3C3833;
+    --color-negro: black;
+}
+
+/* Estilos base */
+body {
+    font-family: 'Caviar Dreams', sans-serif;
+    color: var(--color-gris);
+    background-color: var(--color-blanco); /* Establece el fondo del body a amarillo */
+    font-weight: 400;
+    font-style: normal;
+}
+
+article p, ul {
+    color: var(--color-negro); /* Por ejemplo, café. Puedes usar var(--color-verde) o var(--color-gris-oscuro) */
+}
+
+.text-muted {
+    color: var(--color-negro) !important; /* Usamos !important para asegurar que sobreescriba el estilo de Bootstrap */
+}
+
+/* Estilos para títulos y subtítulos */
+h1, h2, h3, h4, h5, h6,
+.card-title,
+.display-4,
+.fw-bold,
+.blog-title,
+.modal-title,
+.nav-link,
+.btn,
+.blog-card .card-title,
+.article-content h4 {
+    font-family: 'MADE TOMMY', sans-serif;
+}
+
+/* Estilos específicos para diferentes pesos de MADE TOMMY */
+h1, .display-4, .blog-title {
+    font-weight: 800; /* ExtraBold */
+}
+
+h2, h3, .card-title, .modal-title {
+    font-weight: 700; /* Bold */
+}
+
+h4, h5, .lead, .nav-link, .btn {
+    font-weight: 500; /* Medium */
+}
+
+h6, .blog-card .card-title {
+    font-weight: 400; /* Regular */
+}
+
+/* Estilos para textos normales */
+p, 
+.text-secondary,
+.form-label,
+.card-text,
+.blog-description,
+.blog-card .card-text,
+.article-content p,
+.blog-footer p,
+small,
+.text-muted {
+    font-family: 'Caviar Dreams', sans-serif;
+    font-weight: 400; /* Regular */
+}
+
+/* Estilos para textos en negrita */
+strong, 
+b,
+.fw-bold {
+    font-family: 'Caviar Dreams', sans-serif;
+    font-weight: 700; /* Bold */
+}
+
+/* Estilos para el nombre de la compañía */
+header h1,
+footer .fs-4.fw-semibold {
+    font-family: 'MADE TOMMY', sans-serif !important;
+    font-weight: 700; /* Bold */
+}
+
+/* Estilos de navegación */
+nav, footer {
+    font-family: 'MADE TOMMY', sans-serif;
+    font-weight: 400;
+}
+
+/* Estilos específicos para la barra de navegación */
+.bg-secondary {
+    background-color: var(--color-gris) !important;
+}
+
+.nav-link {
+    color: var(--color-blanco) !important;
+    transition: all 0.3s ease;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    font-family: 'MADE TOMMY', sans-serif;
+    font-weight: 400;
+}
+
+.nav-link.hover-accent:hover {
+    background-color: var(--color-blanco);
+    color: var(--color-gris) !important;
+    border-radius: 0.25rem;
+}
+
+/* Estilos para el botón de cambio de idioma */
+#btn-cambiar-idioma {
+    color: var(--color-gris);
+    background: rgba(255, 255, 255, 0.1);
+    padding: 8px 15px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: none;
+    border-radius: 50px;
+}
+
+#btn-cambiar-idioma:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: scale(1.05);
+}
+
+#btn-cambiar-idioma img {
+    width: 24px;
+    height: 18px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+#btn-cambiar-idioma .mx-2 {
+    color: #fff;
+    font-weight: 500;
+}
+
+/* Estilos específicos para el blog */
+.blog-header {
+    background: var(--color-amarillo);
+    color: var(--color-gris);
+    padding: 4rem 0;
+    margin-bottom: 3rem;
+}
+
+.blog-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--color-gris);
+}
+
+.blog-description {
+    font-size: 1.1rem;
+    max-width: 800px;
+    margin: 0 auto;
+    color: var(--color-gris);
+}
+
+
+/* Estilos para el buscador */
+.search-container {
+    max-width: 600px;
+    margin: 2rem auto;
+}
+
+.search-container .input-group {
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    border-radius: 25px;
+    overflow: hidden;
+}
+
+.search-container .form-control {
+    border: 2px solid var(--color-gris);
+    border-radius: 25px 0 0 25px;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border-right: none;
+}
+
+.search-container .form-control:focus {
+    box-shadow: none;
+    border-color: var(--color-gris);
+}
+
+.custom-search-btn {
+    background-color: var(--color-blanco) !important;
+    border: 2px solid var(--color-gris) !important;
+    border-radius: 0 25px 25px 0;
+    color: var(--color-gris) !important;
+    padding: 0.75rem 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 50px;
+    transition: all 0.3s ease;
+}
+
+.custom-search-btn:hover {
+    background-color: var(--color-gris) !important;
+    border-color: var(--color-gris) !important;
+    color: var(--color-blanco) !important;
+}
+
+.custom-search-btn .material-icons {
+    color: var(--color-gris) !important;
+    font-size: 24px;
+}
+
+.custom-search-btn:hover .material-icons {
+    color: var(--color-blanco) !important;
+}
+
+/* Estilos para los filtros */
+.blog-filters {
+    margin-bottom: 2rem;
+}
+
+.blog-filters .btn {
+    border: 2px solid var(--color-gris);
+    color: var(--color-blanco);
+    background: var(--color-gris);
+    font-weight: 600;
+    transition: all 0.3s ease;
+    padding: 0.5rem 1.5rem;
+}
+
+.blog-filters .btn:hover {
+    background: var(--color-amarillo);
+    color: var(--color-gris);
+    border-color: var(--color-amarillo);
+}
+
+.blog-filters .btn .material-icons {
+    color: var(--color-blanco);
+    font-size: 1.25rem;
+}
+
+.blog-filters .btn:hover .material-icons {
+    color: var(--color-gris);
+}
+
+/* Estilos para las tarjetas del blog */
+.blog-card {
+    background: var(--color-blanco);
+    border: none;
+    box-shadow: 0 0.5rem 1rem rgba(60,56,51,0.10);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+    animation: fadeIn 0.5s ease-out;
+}
+
+.blog-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 1rem 3rem rgba(0,0,0,.175) !important;
+}
+
+.blog-card .card-img-top {
+    height: 224px;
+    object-fit: cover;
+}
+
+.blog-card .card-body {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.blog-card .card-title {
+    color: var(--color-verde);
+    font-family: 'MADE TOMMY', sans-serif;
+    font-weight: 700;
+    font-size: 1.25rem;
+}
+
+.blog-card .card-text {
+    color: var(--color-gris);
+    font-family: 'Caviar Dreams', sans-serif !important;
+    font-weight: 400;
+    flex-grow: 1;
+}
+
+.blog-card .read-more {
+    color: var(--color-amarillo);
+    text-decoration: none;
+    font-family: 'MADE TOMMY', sans-serif;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: gap 0.3s ease;
+    margin-top: auto;
+}
+
+.blog-card .read-more:hover {
+    gap: 0.75rem;
+    color: var(--color-gris);
+}
+
+.blog-card small {
+    font-family: 'Caviar Dreams', sans-serif !important;
+    font-weight: 400;
+}
+
+.blog-card .badge {
+    font-family: 'MADE TOMMY', sans-serif;
+    font-weight: 500;
+}
+
+/* Estilos para el footer del blog */
+.blog-footer {
+    background: var(--color-gris);
+    color: var(--color-blanco);
+    padding: 2rem 0 1rem 0;
+    margin-top: 4rem;
+}
+
+.blog-footer a {
+    color: var(--color-amarillo);
+    text-decoration: underline;
+    transition: color 0.3s ease;
+}
+
+.blog-footer a:hover {
+    color: var(--color-blanco);
+}
+
+/* Utilidades */
+.shadow-lg {
+    box-shadow: 0 1rem 3rem rgba(0,0,0,.175) !important;
+}
+
+.text-accent {
+    color: var(--color-verde) !important;
+}
+
+.bg-accent {
+    background-color: var(--color-verde) !important;
+}
+
+/* Estilos de las etiquetas */
+.badge {
+    background-color: var(--color-amarillo) !important;
+    color: var(--color-gris) !important;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+}
+
+/* Estilos de paginación */
+.pagination {
+    --bs-pagination-bg: var(--color-blanco);
+    --bs-pagination-border-color: var(--color-gris);
+}
+
+.pagination .page-link {
+    color: var(--color-gris);
+    border: 1px solid var(--color-gris);
+    padding: 0.5rem 1rem;
+    background: var(--color-blanco);
+}
+
+.pagination .page-item.active .page-link {
+    background-color: var(--color-gris);
+    border-color: var(--color-gris);
+    color: var(--color-blanco);
+}
+
+/* Botón volver arriba */
+#btn-volver-arriba {
+    background: var(--color-gris);
+    color: var(--color-blanco);
+    border: none;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+#btn-volver-arriba:hover {
+    background: var(--color-amarillo);
+    color: var(--color-gris);
+    transform: translateY(-3px);
+}
+
+#btn-volver-arriba:hover .material-icons {
+    color: var(--color-gris);
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .blog-title {
+        font-size: 2rem;
+    }
+    
+    .search-container {
+        width: 90%;
+    }
+    
+    .blog-filters {
+        flex-direction: column;
+        align-items: stretch;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        background: var(--color-blanco);
+        padding: 1rem 0;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    
+    .blog-filters .btn {
+        width: 100%;
+    }
+
+    .blog-card .card-body {
+        padding: 1.75rem;
+    }
+
+    #btn-volver-arriba {
+        bottom: 5rem;
+        right: 1rem;
+    }
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Estilos para los modales */
+.modal-content {
+    border: none;
+    border-radius: 1rem;
+    box-shadow: 0 0.5rem 1rem rgba(60,56,51,0.15);
+}
+
+.modal-header {
+    border-bottom: 2px solid var(--color-amarillo);
+    background-color: var(--color-verde);
+    color: var(--color-blanco);
+    border-radius: 1rem 1rem 0 0;
+}
+
+.modal-header .btn-close {
+    filter: brightness(0) invert(1);
+}
+
+.modal-title {
+    font-family: 'MADE TOMMY', sans-serif;
+    font-weight: 700;
+}
+
+.modal-body {
+    padding: 2rem;
+}
+
+.modal-footer {
+    border-top: 2px solid var(--color-amarillo);
+    padding: 1rem 2rem;
+}
+
+.modal-footer .btn-secondary {
+    background-color: var(--color-gris);
+    border: none;
+    padding: 0.5rem 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.modal-footer .btn-secondary:hover {
+    background-color: var(--color-verde);
+    transform: translateY(-2px);
+}
+
+/* Estilos para el contenido de artículos */
+.article-content h4 {
+    color: var(--color-verde);
+    font-family: 'MADE TOMMY', sans-serif;
+    font-weight: 700;
+    margin-top: 2rem;
+}
+
+.article-content ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.article-content ul li {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.article-content ul li:before {
+    content: "•";
+    color: var(--color-amarillo);
+    position: absolute;
+    left: 0;
+    font-size: 1.5rem;
+    line-height: 1;
+}
+
+/* Animación para los modales */
+.modal.fade .modal-dialog {
+    transform: scale(0.8);
+    transition: transform 0.3s ease-out;
+}
+
+.modal.show .modal-dialog {
+    transform: scale(1);
+}
+
+/* Estilos para el botón Cargar más */
+.load-more-container {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.btn-load-more {
+    background: var(--color-verde);
+    color: var(--color-blanco);
+    border: none;
+    padding: 0.75rem 2rem;
+    border-radius: 25px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.btn-load-more:hover {
+    background: var(--color-cafe);
+    transform: translateY(-2px);
+    color: var(--color-blanco);
+}
+
+.btn-load-more:hover .material-icons {
+    color: var(--color-blanco);
+}
+
+.btn-load-more .material-icons {
+    font-size: 1.25rem;
+    color: var(--color-blanco);
+}
+
+/* Estilos para los íconos */
+.material-icons {
+    color: var(--color-blanco);
+}
